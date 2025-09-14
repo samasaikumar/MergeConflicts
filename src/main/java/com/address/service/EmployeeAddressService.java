@@ -17,7 +17,7 @@ public class EmployeeAddressService {
 	private AddressRepo addressRepo;
 	
 	//private Model 
-	public ResponseAddress getAddress(int id)
+	public ResponseAddress getAddress(final int id)
 	{
 		Address byEmployeeId = addressRepo.findByEmpId(id);
 		ResponseAddress rs = new ResponseAddress();
