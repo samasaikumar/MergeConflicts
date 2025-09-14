@@ -17,9 +17,9 @@ public class EmployeeAddressService {
 	private AddressRepo addressRepo;
 	
 	//private Model 
-	public ResponseAddress getAddress(final int id)
+	public ResponseAddress getAddress(int Id)
 	{
-		Address byEmployeeId = addressRepo.findByEmpId(id);
+		Address byEmployeeId = addressRepo.findByEmpId(Id);
 		ResponseAddress rs = new ResponseAddress();
 		BeanUtils.copyProperties(byEmployeeId, rs);
 		return rs;
