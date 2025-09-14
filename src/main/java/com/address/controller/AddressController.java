@@ -20,10 +20,10 @@ public class AddressController {
 	private EmployeeAddressService employeeAddressService;
 	
 	@GetMapping("/get/address/{id}")
-    public ResponseEntity<ResponseAddress>	getEmployeeAddressController(@PathVariable int id)
+    public ResponseEntity<ResponseAddress>	getEmployeeAddressController(final @PathVariable int id)
     {
 		ResponseAddress address = employeeAddressService.getAddress(id);
-		System.out.println("merge conflicts");
+		System.out.println("merge to conflicts");
 		return ResponseEntity.status(HttpStatus.OK).body(address);
 		
 	
