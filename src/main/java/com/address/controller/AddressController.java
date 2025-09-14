@@ -23,7 +23,10 @@ public class AddressController {
     public ResponseEntity<ResponseAddress>	getEmployeeAddressController(@PathVariable int id)
     {
 		ResponseAddress address = employeeAddressService.getAddress(id);
+		System.out.println("merge conflicts");
 		return ResponseEntity.status(HttpStatus.OK).body(address);
+		
+	
     	
     }
 	
